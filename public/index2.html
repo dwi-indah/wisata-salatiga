@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Salatiga Tourism - Harmoni Alam &amp; Budaya</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-primary-fixed-variant": "#005235",
+                        "primary-fixed": "#a1f4c7",
+                        "primary-fixed-dim": "#86d7ac",
+                        "on-background": "#1a1c1b",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-error": "#ffffff",
+                        "danish-black": "#1A1A1A",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#3d0508",
+                        "on-tertiary-container": "#ffbdb9",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#77302f",
+                        "primary": "#004a30",
+                        "merbabu-green": "#006442",
+                        "surface-container-high": "#e8e8e6",
+                        "inverse-surface": "#2f3130",
+                        "inverse-primary": "#86d7ac",
+                        "tertiary-fixed-dim": "#ffb3af",
+                        "tertiary-fixed": "#ffdad7",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-secondary": "#ffffff",
+                        "muted-gray": "#757575",
+                        "on-surface-variant": "#3f4942",
+                        "outline": "#6f7a72",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeec",
+                        "secondary-container": "#e2dfde",
+                        "on-primary-fixed": "#002113",
+                        "surface-bright": "#f9f9f7",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9f7",
+                        "tertiary-container": "#8b403e",
+                        "surface-container-low": "#f4f4f2",
+                        "on-primary-container": "#8cdeb3",
+                        "tertiary": "#6e2a29",
+                        "secondary-fixed": "#e5e2e1",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "primary-container": "#006442",
+                        "surface-tint": "#116c49",
+                        "surface": "#FFFFFF",
+                        "on-surface": "#1a1c1b",
+                        "outline-variant": "#bec9c0",
+                        "surface-variant": "#e2e3e1",
+                        "on-secondary-fixed-variant": "#474746",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dadad8",
+                        "secondary": "#5f5e5e",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#636262"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "base": "8px",
+                        "gutter": "24px",
+                        "section-gap": "96px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Plus Jakarta Sans"],
+                        "caption": ["Inter"],
+                        "title-lg": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "caption": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+                        "title-lg": ["20px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(0deg, rgba(26, 26, 26, 0.6) 0%, rgba(26, 26, 26, 0) 50%);
+        }
+
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background selection:bg-merbabu-green selection:text-white">
+    <header class="fixed top-0 w-full z-50 bg-surface/80 glass-nav border-b border-outline-variant/30">
+        <nav
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-base max-w-container-max mx-auto">
+            <div class="font-display-lg text-title-lg font-extrabold text-danish-black">
+                Salatiga Tourism
+            </div>
+            <div class="hidden md:flex gap-gutter items-center">
+                <a class="font-label-md text-label-md text-merbabu-green border-b-2 border-merbabu-green pb-1"
+                    href="#">Alam</a>
+                <a class="font-label-md text-label-md text-secondary hover:text-merbabu-green transition-colors duration-300"
+                    href="#">Warisan</a>
+                <a class="font-label-md text-label-md text-secondary hover:text-merbabu-green transition-colors duration-300"
+                    href="#">Rasa</a>
+                <a class="font-label-md text-label-md text-secondary hover:text-merbabu-green transition-colors duration-300"
+                    href="#">Pengalaman</a>
+                <a class="font-label-md text-label-md text-secondary hover:text-merbabu-green transition-colors duration-300"
+                    href="#">Perencanaan</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="material-symbols-outlined text-danish-black">search</button>
+                <button
+                    class="bg-merbabu-green text-white px-6 py-2 font-label-md text-label-md rounded-lg hover:opacity-90 transition-opacity">
+                    Daftar Sekarang
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="relative h-[921px] w-full overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center"
+                data-alt="A breathtaking wide landscape of Mount Merbabu in Salatiga during golden hour. The majestic green peaks are partially covered by soft, swirling mist, creating a serene and mystical atmosphere. The foreground shows lush tropical vegetation and terraced fields, embodying the natural serenity and harmony of the region. The lighting is warm and ethereal, highlighting the editorial minimalism style."
+                style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDKjftnDiIbYVdJeEJhaJdbiVPMzyzC-J5zX5vdrhAfm3VUHEG7iJXCtI3XAp2M-U9o-oIgPxz4RNGtekyHIuWrxHe4ReLJauFe3805x3wVfF4smMkSck8jHVgC_ZE4ktUY--WhbtMgIPVwAiXiUlPHtnecqlCR45lB5ssG7eclFfgEfgRM5P0zFiKp5iciMnEv602VEtMMl-BcYlTo_-xEObmtV0NnrpqWYW7wMmhdueR9RgjLRHIVNcpE4pB-Pzu72gYrlosvXBU');">
+            </div>
+            <div class="absolute inset-0 hero-gradient"></div>
+            <div
+                class="absolute inset-0 flex flex-col justify-end items-start px-margin-mobile md:px-margin-desktop pb-section-gap max-w-container-max mx-auto">
+                <h1
+                    class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-white max-w-3xl mb-6">
+                    Salatiga — Harmoni Alam, Budaya, dan Pengalaman Tak Terlupakan
+                </h1>
+                <p class="font-body-lg text-body-lg text-white/90 max-w-2xl mb-8">
+                    Temukan kota sejuk di lereng gunung, di mana setiap sudut menghadirkan cerita, rasa, dan kehangatan
+                    yang sulit dilupakan.
+                </p>
+                <button
+                    class="bg-white text-danish-black px-10 py-4 font-label-md text-label-md rounded-lg font-bold hover:bg-merbabu-green hover:text-white transition-all duration-300">
+                    Jelajahi Salatiga
+                </button>
+            </div>
+        </section>
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <h2 class="font-headline-md text-headline-md text-danish-black mb-12 text-center">Beri tahu kami apa yang
+                Anda cari</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-xl cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A person in stylish travel gear reviewing a map on a rustic wooden table in a cozy Salatiga cafe. Soft natural light spills through a window, highlighting coffee steam and a vintage compass. The scene evokes the feeling of planning an authentic journey in a peaceful, modern setting."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Ov7KimMH71bZAVtirSCfm7VuOMSwrFxkPiCsPrKIB9rhwR8KbPrAt5K_arFI38JHd4myuchY-68DCYNtO6gsFAr6UXaDj4HEg8oZECQ8FL3EgIoKNXS7H15LNg7d6ZSF-5IFVRYHg9LXeGZKjGXF2xrdE3WkbZjqiYdKX3ujVL67KPpfGCxiFe1WDKbe3LeaGi2saKFkJxCxpC4JqhnwArRltbHcKv3G5FJaFexEDXyBerYzWqRkGJi5ycvo55U4oiHxKMqq5qM" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h3 class="text-white font-headline-sm text-headline-sm">Saya sedang merencanakan perjalanan
+                        </h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-xl cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A vibrant outdoor cultural festival in Salatiga under a clear blue sky. Traditional Javanese dancers in colorful costumes perform on a minimalist wooden stage, surrounded by a diverse audience. The atmosphere is energetic and celebratory, with bright daylight emphasizing the rich textures and community spirit."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDA7gVQNJ4foUPHnrKRrKyXAnJd5FcY9CzCh22EFca6EftDMpmgL0dn9vQy3mU1pisO90mjsKG274-pahJuAR3CoSywKfgcEYuf7xmJFe_CKNwEoHCdKXDuYIx3Rs_JMuxRobevxjOZAPvjpzG1K_CXBwWQag-D-F2ChyhzBM-XIwlAamEQuToylLnpKRPUAfImqrThcrLufR6eDMRAGAf1D7_L5wPsO7qsszkpq_6Lh3FRl--9z0CwwNfl152_uG2glPAKfhuwwbc" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h3 class="text-white font-headline-sm text-headline-sm">Saya ingin melihat acara</h3>
+                    </div>
+                </div>
+                <div class="group relative aspect-[4/5] overflow-hidden rounded-xl cursor-pointer">
+                    <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        data-alt="A serene morning view from a high-altitude balcony in Salatiga, looking out over a sea of clouds with mountain peaks emerging in the distance. A single ceramic mug of tea sits on a stone ledge, suggesting a moment of quiet inspiration and reflection in nature. The aesthetic is clean, bright, and deeply calming."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_SmPcNqPArSi7X-NBbsrd9hGO2pTJFNkCkSPf-1QkJr7CpjcPv1H2xNASK47HilCDZSwIXWGzXmjAkT0YXsMvYObfwLr90GfZkrClmwpgwuCWLkKbOXotW9I7L6DSQw5UdCG4yUZDNJXLPYtyTOcTywLfy5RFqf_220TGVJMi3IMjP2doVRZP171qnFyxhWSW0WOd7ET9ldi1bGa8eLIVbQuBwEQqpbZrSNQqgCbsAicB9_noPgEXTCZRqyCXkUDQGVu02BBw_mY" />
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+                    <div class="absolute bottom-8 left-8">
+                        <h3 class="text-white font-headline-sm text-headline-sm">Saya butuh inspirasi hari ini</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-surface-container-low py-section-gap">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <div class="flex justify-between items-end mb-12">
+                    <h2 class="font-headline-md text-headline-md text-danish-black">Mulai Menjelajahi</h2>
+                    <a class="font-label-md text-label-md text-merbabu-green flex items-center gap-2 group"
+                        href="#">Lihat semua <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span></a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+                    <div class="md:col-span-6 group cursor-pointer">
+                        <div class="aspect-video overflow-hidden mb-4 rounded-lg">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A lush green mountain trail in Salatiga, lined with blooming tropical wildflowers in vibrant hues. The path winds through a misty forest, captured in a crisp, editorial photography style. The soft morning light creates a fresh, invigorating atmosphere perfect for a seasonal guide."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFQZP3EQijmKd9_kXpfQrjC1lK3OBM2nCcBHQLH5c_hLB9eOJ74dyin-4QgHyH5pWbE2wquEn-ZOcq_4Y4egcjKXgYCguAEB1FhY1922Eq-AJhDNKtSpS3D6KI-2r1WzCcnfLbacfZgeua1JOYBA9M2OJi9rWhFI5DS3OptaAEyGO8YVDl050Y3ANWQFG5Pc2NX0eD-nwEMViKYtOp8N_xH2vllG4jFuvkxj_0iy4PTimeczikyX8YErxdaRv7iVxtHjpeke53YkQ" />
+                        </div>
+                        <span
+                            class="text-merbabu-green font-label-md text-label-md uppercase tracking-widest">PANDUAN</span>
+                        <h3 class="font-headline-sm text-headline-sm text-danish-black mt-2">Musim Semi di Salatiga</h3>
+                    </div>
+                    <div class="md:col-span-3 group cursor-pointer">
+                        <div class="aspect-[3/4] overflow-hidden mb-4 rounded-lg">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                data-alt="A cinematic black and white portrait of a local Salatiga artisan working on traditional batik in a sun-drenched workshop. Dust motes dance in the light, highlighting the intricate details of the cloth and the focused expression of the maker. This captures the soulful essence of local stories and heritage."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtKMZrJODNZQwD7QQoG2EqzetcUTW0SO5f3w3aWHND6OFTgd0c8B5gTJmIGEujQZ9MQZNpvFcGCAW0snR_MZuVmCizgErhgo8nWlYIxc3AvYXON-L5TbthTVrPbL3X0LFYAEZ5Lyg0IrnbavBe8BoNwyaHD_mv5LKOF0WxC7TVsTbLJZtHrlAFXF-SC8t2gAD3S3RjJ-RIT6e3kDa3bVS1PwX_Rw2phFhqKQHIxTs2wgJJhM5S4ppn7w81EMSVuHbovMvmGMkFX70" />
+                        </div>
+                        <span class="text-merbabu-green font-label-md text-label-md uppercase tracking-widest">PILIHAN
+                            EDITOR</span>
+                        <h3 class="font-title-lg text-title-lg text-danish-black mt-2">Cerita Salatiga</h3>
+                    </div>
+                    <div class="md:col-span-3 group cursor-pointer">
+                        <div
+                            class="aspect-[3/4] overflow-hidden mb-4 rounded-lg bg-merbabu-green flex items-center justify-center p-8 text-center relative">
+                            <span class="material-symbols-outlined text-white/20 text-9xl absolute -top-4 -right-4"
+                                style="font-variation-settings: 'FILL' 1;">podcasts</span>
+                            <div class="relative z-10">
+                                <span
+                                    class="text-white/80 font-label-md text-label-md uppercase tracking-widest block mb-4">PODCAST</span>
+                                <h3 class="font-title-lg text-title-lg text-white">Panduan Lokal Salatiga: Suara dari
+                                    Lereng Merbabu</h3>
+                                <button
+                                    class="mt-8 bg-white/20 hover:bg-white/30 text-white rounded-full p-4 transition-colors">
+                                    <span class="material-symbols-outlined"
+                                        style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="bg-danish-black text-white rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch">
+                <div class="flex-1 p-12 md:p-20 flex flex-col justify-center">
+                    <h2 class="font-display-lg text-headline-md md:text-display-lg mb-6 leading-tight">Hemat biaya
+                        dengan Kartu Wisata Salatiga</h2>
+                    <p class="font-body-lg text-body-lg text-white/70 mb-10 max-w-lg">
+                        Dapatkan akses gratis ke 80+ atraksi wisata, museum, dan transportasi publik tanpa batas di
+                        seluruh kota. Cara terbaik menjelajahi Salatiga dengan efisien.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <button
+                            class="bg-merbabu-green text-white px-10 py-4 font-label-md text-label-md rounded-lg font-bold hover:bg-primary-fixed-dim hover:text-danish-black transition-all">Pesan
+                            Kartu Sekarang</button>
+                        <button
+                            class="border border-white/30 text-white px-10 py-4 font-label-md text-label-md rounded-lg font-bold hover:bg-white hover:text-danish-black transition-all">Cara
+                            Kerja</button>
+                    </div>
+                </div>
+                <div class="flex-1 min-h-[400px]">
+                    <img class="w-full h-full object-cover"
+                        data-alt="A modern, minimalist digital pass interface shown on a high-end smartphone screen held by a traveler against a blurred background of Salatiga's colonial architecture. The app displays a QR code and icons representing free transport and museum access, emphasizing convenience and modern travel technology in a clean, sophisticated visual style."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJzruGmR8sFRtN9qtsoXO-eN5Hfl5KElX-TQQLO6xBk8vRc8QCkfF3F3S18K0rPEHBKqgluxQvY6ZUb5enwJRi-RkTaJGy4LO6NjsZMOtFJtee0iZXuA-Ir-gWdhFkxX2IMu9kXsoXAjvqiwkp3zBC2OOOHO_KFvtYdXzH3Co8wZcL4Sm7f-b7cxHC9qHMgmzZpxdj9JebYa5oi0kgZQaqKc0t8ZZhFQdmR2XnD3fFfIgRibjJbd6BeFeT-TL7LxeOuPaIticFgpk" />
+                </div>
+            </div>
+        </section>
+        <section class="py-section-gap bg-surface">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <h2 class="font-headline-md text-headline-md text-danish-black mb-12">Ada dalam setiap yang kami lakukan
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <div class="flex flex-col gap-4">
+                        <span class="material-symbols-outlined text-merbabu-green text-4xl">shield_moon</span>
+                        <h3 class="font-title-lg text-title-lg text-danish-black">Keamanan di Salatiga</h3>
+                        <p class="font-body-md text-body-md text-secondary">Salatiga secara konsisten menduduki
+                            peringkat sebagai salah satu kota paling toleran dan aman di Indonesia, memastikan kunjungan
+                            Anda bebas dari rasa khawatir.</p>
+                        <a class="font-label-md text-label-md font-bold underline decoration-merbabu-green underline-offset-4"
+                            href="#">Baca lebih lanjut</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="material-symbols-outlined text-merbabu-green text-4xl">eco</span>
+                        <h3 class="font-title-lg text-title-lg text-danish-black">Panduan Keberlanjutan</h3>
+                        <p class="font-body-md text-body-md text-secondary">Kami berkomitmen pada pariwisata
+                            berkelanjutan yang menjaga keasrian lereng Merbabu dan kesejahteraan masyarakat lokal kami.
+                        </p>
+                        <a class="font-label-md text-label-md font-bold underline decoration-merbabu-green underline-offset-4"
+                            href="#">Komitmen kami</a>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <span class="material-symbols-outlined text-merbabu-green text-4xl">temple_hindu</span>
+                        <h3 class="font-title-lg text-title-lg text-danish-black">Ibu Kota Budaya</h3>
+                        <p class="font-body-md text-body-md text-secondary">Dari prasasti kuno hingga arsitektur
+                            kolonial yang terawat, Salatiga adalah perpaduan unik sejarah yang hidup di masa kini.</p>
+                        <a class="font-label-md text-label-md font-bold underline decoration-merbabu-green underline-offset-4"
+                            href="#">Jelajahi sejarah</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-section-gap bg-surface-container-low overflow-hidden">
+            <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <div class="flex flex-col md:flex-row gap-20 items-center">
+                    <div class="flex-1 relative">
+                        <div class="w-full aspect-square rounded-full border border-outline-variant p-4">
+                            <div class="w-full h-full rounded-full overflow-hidden">
+                                <img class="w-full h-full object-cover"
+                                    data-alt="A detailed, close-up shot of the ancient Prasasti Plumpungan stone inscription in Salatiga, showcasing the weathered Sanskrit carvings. The stone is surrounded by a tranquil, minimalist garden with soft green grass and zen-like lighting, emphasizing its historical importance as the birthplace of the city."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB484zhudFLOaKG5MzixUQASU7t1mzaASIYdNc4989nX25Q_TDRW2fitX-4yAbwTwfzkltwCpFAlwY8Nwlma51bUHVufjGvLLgjnmv1lXis0G8Tkudr1_9b69Dgv3HBRpUWOF3ncuCXp9GBKqzWGbXJR-xqZJ_dFzJKejiZuCZC9td_bdKwooV2r645nEakvdj7m-jARikNIC9oecGXnFuOvz31OJY09QtEq5AYoUSmPcwJwE38a3h4RP7BEmkoWcywb-FCB17gx_k" />
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -bottom-10 -right-10 bg-white p-8 rounded-2xl shadow-xl max-w-xs hidden md:block">
+                            <span class="text-merbabu-green font-bold text-headline-sm">750 M</span>
+                            <p class="font-body-md text-body-md text-secondary mt-2">Tahun di mana Prasasti Plumpungan
+                                menetapkan status Salatiga sebagai daerah swatantra.</p>
+                        </div>
+                    </div>
+                    <div class="flex-1">
+                        <h2 class="font-display-lg text-headline-md md:text-display-lg text-danish-black mb-8">Warisan
+                            yang Abadi</h2>
+                        <p class="font-body-lg text-body-lg text-secondary mb-8">
+                            Sejarah Salatiga bukanlah sekadar deretan angka. Ia dimulai dari prasasti batu Plumpungan
+                            yang legendaris, melewati masa kejayaan "De Schoonste Stad van Midden-Java" di era kolonial,
+                            hingga menjadi simbol toleransi modern saat ini.
+                        </p>
+                        <div class="space-y-6">
+                            <div class="flex gap-4 items-start">
+                                <div class="w-2 h-2 bg-merbabu-green rounded-full mt-2.5 shrink-0"></div>
+                                <p class="font-body-md text-body-md text-on-surface"><strong
+                                        class="text-danish-black">Prasasti Plumpungan:</strong> Bukti sejarah tertua
+                                    hari jadi Salatiga.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-2 h-2 bg-merbabu-green rounded-full mt-2.5 shrink-0"></div>
+                                <p class="font-body-md text-body-md text-on-surface"><strong
+                                        class="text-danish-black">Arsitektur Kolonial:</strong> Jelajahi bangunan megah
+                                    peninggalan Belanda yang masih berdiri kokoh di pusat kota.</p>
+                            </div>
+                            <div class="flex gap-4 items-start">
+                                <div class="w-2 h-2 bg-merbabu-green rounded-full mt-2.5 shrink-0"></div>
+                                <p class="font-body-md text-body-md text-on-surface"><strong
+                                        class="text-danish-black">Kota Empat Pilar:</strong> Menemukan harmoni dalam
+                                    keragaman budaya dan agama.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <h2 class="font-headline-md text-headline-md text-danish-black mb-12">Icip-icip Salatiga: Surga Kuliner</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4 relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A professional food photography shot of Sate Sapi Suruh, featuring tender grilled beef skewers glistening with a rich peanut sauce. The dish is presented on a clean, ceramic plate with traditional side garnishes like sliced shallots and chilies. The lighting is bright and appetizing, highlighting the juicy textures of the meat in a modern editorial style."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZgdVrbB4XR_tYEvdwE5xPhEsWB7vg3S8ozmB1ppF8tpcy-cKY6vjxmZyRT8AGbqhPjCrmapbS3WocgqDsicd1hcTddrP_vNQPMOqZM-DAlI9Lijy2ElMS85zLaOOe1BR2mHv9ee-9N-LaEEQ5F0cm3edI3jsD5r51vU6TkxgGtf_StZxq-ZTtO6ymEW0g5XYyV2W7KeGUlI0iORtJ0btpfFTwCEEihxBoyPiIVzgvRyikFxtpJlLgmGyVtXWEja4XWBa040OH4y0" />
+                        <div
+                            class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-merbabu-green font-label-md text-label-md font-bold">
+                            Wajib Coba</div>
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-danish-black mb-2">Sate Sapi Suruh</h3>
+                    <p class="font-body-md text-body-md text-secondary">Legenda kuliner Salatiga dengan bumbu kacang
+                        rahasia yang telah ada sejak puluhan tahun.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4 relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A sophisticated presentation of Enting-enting Gepuk on a minimalist wooden tray. The brittle peanut snacks are shown in their distinctive triangular wrappers, with one unwrapped to reveal the golden, crunchy texture. The scene is bright and clean, capturing the essence of Salatiga's most famous sweet souvenir."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx6cFfdy38ojA1bxiIlTTzssrTwuF2cbj8nifXvHSNhllM6sEXwc7VBT2bFMRXrcRORNya-jzAz5SXt8yvpCvkfnFHEVmfI6MCaM3rebtgnOgKghAUeeHQdOVpxdV6zdxI4_JhIFQ6tKW6kch9ke2NLQNRtW0t0FcP9iTKuydmg4lx999zfe0QX3Ru6awHYBMTn04wQzHqDN5UKoz69BEIzzY0DQOA_JSxvE90_YMp26DSKPsk59bDGb5AFieExMpqfbr9obavY1k" />
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-danish-black mb-2">Enting-enting Gepuk</h3>
+                    <p class="font-body-md text-body-md text-secondary">Camilan kacang tanah yang ikonik, renyah, dan
+                        manis yang ditumbuk secara tradisional.</p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="aspect-[4/3] overflow-hidden rounded-xl mb-4 relative">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="A steaming bowl of Ronde Jago, showing colorful glutinous rice balls in a clear ginger syrup. The bowl is set on a dark, rustic wooden table in a dimly lit, cozy evening setting, with soft steam rising from the bowl. The lighting is warm and inviting, perfect for showcasing this comforting local ginger beverage."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjfLqjdIkjU2uslSsdprCIQ-sDBxNplz9ysWBHqPxidfbPdpEKOSoHrW8-uQtWPgabVO177qTIdcPOmHl5yjqY1dZPXcZbwKNOx8P-MA7meh__M70qJRsjJSDCj1oLuGyUg07Dr5uMAeeLuIm3hQ9EV-RmDkn-nyh8LaxXVtHPUtt0-MTRIfEiidCprxtGqrAAa4lE4LnDLI2cL7Y9ccalYB9eKcW9E2LBCW97T5hrYufl_0Q9GLJbiHD50vJdl_RZn1kvcKPiZsk" />
+                    </div>
+                    <h3 class="font-title-lg text-title-lg text-danish-black mb-2">Ronde Jago</h3>
+                    <p class="font-body-md text-body-md text-secondary">Hangatkan malam dingin Anda dengan semangkuk
+                        ronde jahe yang menghangatkan jiwa.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-surface-container-lowest border-t border-outline-variant/20 pt-section-gap pb-12">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-section-gap">
+                <div class="col-span-1">
+                    <div class="font-display-lg text-headline-sm text-merbabu-green mb-6 font-extrabold">Salatiga
+                        Tourism</div>
+                    <p class="font-body-md text-body-md text-secondary max-w-xs">
+                        Portal resmi pariwisata Kota Salatiga. Menemukan keindahan di setiap sudut kota di lereng
+                        Merbabu.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-danish-black uppercase tracking-widest mb-6">Navigasi
+                    </h4>
+                    <ul class="space-y-4 font-body-md text-body-md text-secondary">
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Tentang Kami</a></li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Destinasi Alam</a></li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Peta Kota</a></li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-danish-black uppercase tracking-widest mb-6">Informasi
+                    </h4>
+                    <ul class="space-y-4 font-body-md text-body-md text-secondary">
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Kebijakan Privasi</a></li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Syarat &amp; Ketentuan</a>
+                        </li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">Panduan Turis</a></li>
+                        <li><a class="hover:text-merbabu-green transition-colors" href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-label-md text-label-md text-danish-black uppercase tracking-widest mb-6">Ikuti Kami
+                    </h4>
+                    <div class="flex gap-4">
+                        <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-merbabu-green hover:text-white transition-all"
+                            href="#">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-merbabu-green hover:text-white transition-all"
+                            href="#">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-merbabu-green hover:text-white transition-all"
+                            href="#">
+                            <svg class="w-5 h-5 fill-current" viewbox="0 0 24 24">
+                                <path
+                                    d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/10">
+                <p class="font-body-md text-caption text-secondary">
+                    © 2024 Pariwisata Salatiga. Seluruh Hak Cipta Dilindungi.
+                </p>
+                <div class="flex gap-8 mt-4 md:mt-0 font-label-md text-caption text-secondary">
+                    <a class="hover:text-merbabu-green" href="#">Bahasa Indonesia (ID)</a>
+                    <a class="hover:text-merbabu-green" href="#">English (US)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Atmospheric Fade-in Animation for elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div > div, section > div > h2').forEach(el => {
+                el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+                observer.observe(el);
+            });
+        });
+
+        // Navbar blur intensity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+                header.classList.remove('bg-surface/80');
+                header.classList.add('bg-surface/95');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.remove('bg-surface/95');
+                header.classList.add('bg-surface/80');
+            }
+        });
+    </script>
+</body>
+
+</html>

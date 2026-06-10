@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salatiga — Harmoni Alam & Budaya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #2D4636;
+            --color-primary-light: #B1CDB8;
+            --color-primary-accent: #DBF8E1;
+            --color-secondary: #A67B5B;
+            --color-tertiary: #E8E2D6;
+            --color-neutral: #1A1A1A;
+            --color-neutral-light: #F7F6F2;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-body relative text-primary">
+
+    <header id="navbar"
+        class="navbar fixed top-0 left-0 right-0 z-10 p-3 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
+        <div
+            class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
+            <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+            <ul class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Sejarah</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Wisata</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Event</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Akomodasi</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Rencana Perjalanan</a></li>
+            </ul>
+            <div class="absolute top-0 right-0 flex items-center sm:hidden">
+                <button type="button" command="--toggle" commandfor="mobile-menu"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <ul class="">
+                    <li class="py-4"><a href="#" class="block w-100">Home</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Sejarah</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Wisata</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Event</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Akomodasi</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Rencana Perjalanan</a></li>
+                </ul>
+            </el-disclosure>
+        </div>
+    </header>
+
+    <main class="relative bg-white min-h-screen px-3 lg:px-4 pt-16">
+
+        <!-- HERO -->
+        <section class="pt-16 pb-32 bg-primary text-white rounded-lg">
+
+            <div class="container mx-auto px-6">
+
+                <div class="max-w-4xl">
+
+                    <span class="uppercase tracking-widest text-sm font-semibold">
+                        Legal
+                    </span>
+
+                    <h1 class="text-6xl font-bold mt-2 mb-6">
+                        Privacy Policy
+                    </h1>
+
+                    <p class="text-lg text-white/80">
+                        Terakhir diperbarui: Januari 2026
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+        <section class="py-16">
+
+            <div class="container flex flex-col gap-16">
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Kebijakan Privasi</h2>
+    
+                    <div class="inline text-lg">
+                        <p>Explore Salatiga menghargai privasi setiap pengunjung.
+                        Halaman ini menjelaskan bagaimana informasi dikumpulkan,
+                        digunakan, dan dilindungi saat Anda menggunakan website ini.</p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Informasi yang Kami Kumpulkan</h2>
+    
+                    <div class="inline text-lg">
+                        <ul class="list-disc list-inside">
+                            <li>Nama dan alamat email melalui formulir kontak.</li>
+                            <li>Data penggunaan website melalui analytics.</li>
+                            <li>Informasi perangkat dan browser.</li>
+                            <li>Data lokasi umum untuk kebutuhan peta dan navigasi.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Penggunaan Informasi</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Informasi digunakan untuk meningkatkan layanan,
+                            mengembangkan konten wisata, memperbaiki performa website,
+                            dan menjawab pertanyaan pengguna.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Cookies</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Website ini dapat menggunakan cookies untuk
+                        meningkatkan pengalaman pengguna dan menganalisis
+                        penggunaan website.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Layanan Pihak Ketiga</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Kami dapat menggunakan layanan pihak ketiga seperti:
+                        </p>
+
+                        <ul class="list-disc list-inside">
+                            <li>Google Analytics</li>
+                            <li>OpenStreetMap</li>
+                            <li>Leaflet.js</li>
+                            <li>Youtube Embed</li>
+                            <li>Instagram Feed</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Keamanan Data</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Kami berupaya melindungi data pengguna melalui praktik keamanan yang wajar dan sesuai standar industri.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Tautan Eksternal</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Website ini dapat memuat tautan ke situs eksternal. Kami tidak bertanggung jawab atas kebijakan privasi situs tersebut.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Perubahan Kebijakan</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Kebijakan privasi dapat diperbarui sewaktu-waktu.
+                            <br>Perubahan akan ditampilkan pada halaman ini.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-4">
+                    <h2 class="inline text-primary font-semibold text-xl w-full shrink-0 lg:max-w-xs">Kontak</h2>
+    
+                    <div class="inline text-lg">
+                        <p>
+                            Jika memiliki pertanyaan mengenai kebijakan privasi, silakan hubungi kami melalui halaman kontak.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer
+        class="footer bg-primary text-white pt-4 px-4 min-h-[30vh]">
+        <div class="grid lg:grid-cols-10 gap-8 mb-8 text-white">
+            <div class="lg:col-span-5">
+                <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+                <p class="text-white/70 leading-8 max-w-md">
+                    Dedikasi website untuk Kota Salatiga.
+                </p>
+
+                <div class="flex gap-4 mt-8">
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-instagram-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-facebook-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-youtube-line"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="lg:col-span-2">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Jelajahi
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="#sejarah" class="hover:text-white transition">
+                            Sejarah
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#budaya" class="hover:text-white transition">
+                            Budaya
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#wisata" class="hover:text-white transition">
+                            Wisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kuliner" class="hover:text-white transition">
+                            Kuliner
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="lg:col-span-3">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Instansi Terkait
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="https://salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Pemerintah Kota Salatiga
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tourism.salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Dinas Pariwisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://salatigakota.bps.go.id" target="_blank" class="hover:text-white transition">
+                            BPS Kota Salatiga
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="mb-16">
+            <img src="asset/images/logo-footer.svg" class="w-full" />
+        </div>
+        <div class="border-t border-white py-4">
+
+            <div class="flex flex-col md:flex-row gap-1 lg:gap-4">
+
+                <p class="text-white/80 text-sm">
+                    © 2026 All Rights Reserved.
+                </p>
+
+                <div class="flex gap-6 text-sm text-white/80">
+
+                    <a href="credits.html">
+                        Credits
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms of Use
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <script src="asset/js/gsap.min.js"></script>
+    <script src="asset/js/GSDevTools.min.js"></script>
+    <script src="asset/js/ScrollTrigger.min.js"></script>
+    <script src="asset/js/SplitText.min.js"></script>
+
+    <script src="asset/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salatiga — Harmoni Alam & Budaya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #2D4636;
+            --color-primary-light: #B1CDB8;
+            --color-primary-accent: #DBF8E1;
+            --color-secondary: #A67B5B;
+            --color-tertiary: #E8E2D6;
+            --color-neutral: #1A1A1A;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-body relative text-primary">
+
+    <header id="navbar" class="navbar fixed top-0 left-0 right-0 w-full z-10 p-2 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
+        <div class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
+            <a href="#" class="logo font-display uppercase">Salatiga</a>
+            <ul
+                class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Sejarah</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Wisata</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Event</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Akomodasi</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Rencana Perjalanan</a></li>
+            </ul>
+            <div class="absolute top-0 right-0 flex items-center sm:hidden">
+                <button type="button" command="--toggle" commandfor="mobile-menu"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <ul class="">
+                    <li class="py-4"><a href="#" class="block w-100">Home</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Sejarah</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Wisata</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Event</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Akomodasi</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Rencana Perjalanan</a></li>
+                </ul>
+            </el-disclosure>
+        </div>
+    </header>
+
+    <main class="relative bg-white pb-8">
+        <section class="hero fixed top-0 left-0 right-0 h-[90vh] -z-1">
+            <div class="relative w-full h-full justify-center pt-16 pb-3 px-3">
+                <div class="bg-primary rounded-lg w-full h-full flex flex-col px-3 pb-3 justify-end" style="background-image: url('./asset/images/cover.jpg'); background-size: cover; background-position: center;">
+                    <p class="text-white/90 italic mb-2">Harmoni Alam, Budaya, dan Pengalaman Tak Terlupakan</p>
+                    <h2 class="uppercase text-white text-5xl md:text-7xl font-bold font-display tracking-wide">Salatiga</h2>
+                </div>
+            </div>
+        </section>
+        <section class="intro mt-[90vh] px-3">
+            <div class="introWrap relative m-auto px-8 py-[5vh] lg:py-[10vh] lg:max-w-3xl text-center">
+                <h2
+                    class="introText relative text-4xl lg:text-5xl font-bold leading-[1.5] tracking-wide z-1 text-primary-light">
+                    Sebuah kota kecil di lereng gunung, di mana setiap sudut menghadirkan cerita, rasa, dan kehangatan
+                    yang sulit dilupakan.</h2>
+                <div class="introImg">
+                    <img class="object-cover rounded-lg"
+                        src="asset/images/intro-1.jpg">
+                </div>
+                <div class="introImg">
+                    <img class="object-cover rounded-lg"
+                        src="asset/images/intro-2.jpg">
+                </div>
+            </div>
+            <div class="introDesc relative text-center lg:max-w-3xl m-auto">
+                <p>Salatiga bukan sekadar kota—ia adalah cerita yang hidup dari masa ke masa. Dari jejak Prasasti Plumpungan hingga bangunan kolonial yang masih berdiri anggun, setiap sudut kota menyimpan kisah tentang perjalanan panjang budaya dan peradaban. Berjalan di Salatiga terasa seperti menelusuri waktu, di mana masa lalu dan masa kini berpadu dengan harmonis.</p>
+                <a href="sejarah.html" class="inline-block py-2 px-4 underline">Detail Sejarah Salatiga</a>
+            </div>
+        </section>
+        <section class="explore px-4 my-4">
+            <!-- Header & Tabs -->
+            <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-8">
+                <h2 class="text-display text-3xl font-medium">Jelajahi Salatiga</h2>
+                <div class="exploreTabs flex gap-1 bg-tertiary p-1 rounded-full w-fit">
+                    <button class="tab-btn active-tab px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200" data-tab="all">Semua</button>
+                    <button class="tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200" data-tab="kuliner">Kuliner</button>
+                    <button class="tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200" data-tab="wisata">Wisata</button>
+                    <button class="tab-btn px-4 py-1.5 rounded-full text-sm font-medium transition-all duration-200" data-tab="akomodasi">Akomodasi</button>
+                </div>
+            </div>
+
+            <!-- Tab Panels -->
+            <div class="tab-panel" data-panel="all">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="kuliner">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="wisata">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="akomodasi">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="wisata">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="kuliner">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto" data-category="akomodasi">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Kuliner -->
+            <div class="tab-panel hidden" data-panel="kuliner">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Kuliner</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Wisata -->
+            <div class="tab-panel hidden" data-panel="wisata">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div class="card w-full max-h-84 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Wisata</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Akomodasi -->
+            <div class="tab-panel hidden" data-panel="akomodasi">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                    <div class="card w-full max-h-84 col-span-2 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa" class="w-full h-full object-cover" />
+                            <div class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">Akomodasi</div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <style type="text/tailwindcss">
+            .tab-btn {
+                color: var(--color-primary);
+                cursor: pointer;
+            }
+            .tab-btn.active-tab {
+                background-color: var(--color-primary);
+                color: white;
+            }
+            .tab-panel {
+                animation: fadeIn 0.25s ease;
+            }
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(6px); }
+                to   { opacity: 1; transform: translateY(0); }
+            }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const tabBtns = document.querySelectorAll('.tab-btn');
+                const tabPanels = document.querySelectorAll('.tab-panel');
+
+                tabBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const target = btn.dataset.tab;
+
+                        // Toggle active state on buttons
+                        tabBtns.forEach(b => b.classList.remove('active-tab'));
+                        btn.classList.add('active-tab');
+
+                        // Show/hide panels
+                        tabPanels.forEach(panel => {
+                            if (panel.dataset.panel === target) {
+                                panel.classList.remove('hidden');
+                            } else {
+                                panel.classList.add('hidden');
+                            }
+                        });
+                    });
+                });
+            });
+        </script>
+        <section class="events my-12 px-4">
+            <!-- Header row: judul + tombol nav -->
+            <div class="flex items-end justify-between mb-6">
+                <h2 class="text-4xl font-medium">Acara Mendatang</h2>
+                <div class="flex gap-2">
+                    <button id="eventsPrev" aria-label="Sebelumnya"
+                        class="events-nav-btn w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center transition-all duration-200 hover:bg-primary hover:text-white hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button id="eventsNext" aria-label="Berikutnya"
+                        class="events-nav-btn w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center transition-all duration-200 hover:bg-primary hover:text-white hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Carousel track -->
+            <div class="relative overflow-hidden">
+                <div id="eventsTrack" class="flex gap-4 transition-transform duration-400 ease-in-out">
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">12 Jul 2026</span>
+                                <h3 class="font-bold text-base mt-1">Festival Kuliner Salatiga</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1504680177321-2e6a879aac86" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">20 Jul 2026</span>
+                                <h3 class="font-bold text-base mt-1">Pasar Malam Plumpungan</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">3 Agu 2026</span>
+                                <h3 class="font-bold text-base mt-1">Hiking Merbabu Trail</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">17 Agu 2026</span>
+                                <h3 class="font-bold text-base mt-1">Pameran Budaya HUT RI</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">1 Sep 2026</span>
+                                <h3 class="font-bold text-base mt-1">Workshop Batik Lokal</h3>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="w-48 md:w-56 lg:w-72 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1467810563316-b5476525c0f9" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-3">
+                                <span class="text-xs text-secondary font-semibold uppercase tracking-wider">14 Sep 2026</span>
+                                <h3 class="font-bold text-base mt-1">Konser Musik Alam Terbuka</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            (function () {
+                const track    = document.getElementById('eventsTrack');
+                const btnPrev  = document.getElementById('eventsPrev');
+                const btnNext  = document.getElementById('eventsNext');
+                let currentIndex = 0;
+
+                function getCardWidth() {
+                    const card = track.querySelector('.flex-shrink-0');
+                    if (!card) return 0;
+                    const gap = 16; // gap-4 = 1rem = 16px
+                    return card.offsetWidth + gap;
+                }
+
+                function getVisibleCount() {
+                    return Math.floor(track.parentElement.offsetWidth / getCardWidth()) || 1;
+                }
+
+                function getTotalCards() {
+                    return track.querySelectorAll('.flex-shrink-0').length;
+                }
+
+                function updateButtons() {
+                    btnPrev.disabled = currentIndex <= 0;
+                    btnNext.disabled = currentIndex >= getTotalCards() - getVisibleCount();
+                }
+
+                function slide(dir) {
+                    const total   = getTotalCards();
+                    const visible = getVisibleCount();
+                    currentIndex  = Math.max(0, Math.min(currentIndex + dir, total - visible));
+                    track.style.transform = `translateX(-${currentIndex * getCardWidth()}px)`;
+                    updateButtons();
+                }
+
+                btnPrev.addEventListener('click', () => slide(-1));
+                btnNext.addEventListener('click', () => slide(1));
+
+                // Reset on resize
+                window.addEventListener('resize', () => {
+                    currentIndex = 0;
+                    track.style.transform = 'translateX(0)';
+                    updateButtons();
+                });
+
+                updateButtons();
+            })();
+        </script>
+        
+        <section class="itenary my-12">
+            <div class="flex flex-col lg:flex-row gap-4 pb-4">
+                <div class="flex-shrik px-4 lg:px-0">
+                    <h2 class="text-4xl mb-12">Rencana Perjalanan</h2>
+                </div>
+                <div class="flex flex-nowrap gap-4 overflow-x-auto pl-4 lg:pl-0">
+                    <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-2">
+                                <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-2">
+                                <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-2">
+                                <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                            </div>
+                            
+                        </a>
+                    </div>
+                    <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                        <a href="detail.html">
+                            <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            </div>
+                            <div class="cardDetail mt-2">
+                                <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                            </div>
+                            
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    <footer class="footer bg-primary text-wite sticky bottom-0 left-0 right-0 pt-4 px-4 -z-1 min-h-[30vh]">
+        <div class="flex justify-between md:justify-start gap-8 mb-4">
+            <div class="flex flex-col gap-2">
+                <h2 class="font-semibold">Link</h2>
+                <a href="#" class="text-white">Agenda</a>
+                <a href="#" class="text-white">Akomodasi</a>
+                <a href="#" class="text-white">Peta</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h2 class="font-semibold">Informasi</h2>
+                <a href="#" class="text-white">Kontak</a>
+                <a href="#" class="text-white">Portal Pemerintah</a>
+                <a href="#" class="text-white">Lisensi</a>
+            </div>
+        </div>
+        <p class="mt-8 text-sm text-white">&copy; 2026 Salatiga. All rights reserved.</p>
+        <div class="">
+            <img src="asset/images/logo-footer.svg" class="w-full" />
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <script src="asset/js/gsap.min.js"></script>
+    <script src="asset/js/GSDevTools.min.js"></script>
+    <script src="asset/js/ScrollTrigger.min.js"></script>
+    <script src="asset/js/SplitText.min.js"></script>
+
+    <script src="asset/js/main.js"></script>
+
+</body>
+
+</html>

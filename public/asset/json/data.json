@@ -1,0 +1,54 @@
+{
+  "city": "Salatiga",
+  "districts": [
+    {
+      "name": "Sidorejo",
+      "coords": [-7.3077, 110.4980],
+      "desc": "Kecamatan dengan pusat pendidikan dan area perkotaan."
+    },
+    {
+      "name": "Sidomukti",
+      "coords": [-7.3256, 110.5100],
+      "desc": "Wilayah strategis dengan pusat pemerintahan dan bisnis."
+    },
+    {
+      "name": "Tingkir",
+      "coords": [-7.3390, 110.4920],
+      "desc": "Kawasan transportasi dan jalur utama Salatiga."
+    },
+    {
+      "name": "Argomulyo",
+      "coords": [-7.3577, 110.5155],
+      "desc": "Area hijau dengan suasana alam yang sejuk dan nyaman."
+    }
+  ],
+  "events" : [
+  {
+    "title": "Kirab HUT Salatiga",
+    "category": "Budaya",
+    "date": "2026-07-24",
+    "location": "Sidorejo, Salatiga",
+    "image": "https://tourism.salatiga.go.id/storage/posts/kirab.jpg",
+    "description": "Perayaan budaya tahunan Hari Jadi Kota Salatiga dengan parade budaya dan seni tradisional.",
+    "url": "https://tourism.salatiga.go.id/artikel/wisata/budaya/kirab-hut-salatiga"
+  },
+  {
+    "title": "Festival Budaya Salatiga",
+    "category": "Festival",
+    "date": "2026-06-21",
+    "location": "Sidomukti, Salatiga",
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop",
+    "description": "Festival budaya dan pertunjukan seni lokal khas Salatiga.",
+    "url": "https://tourism.salatiga.go.id/event"
+  },
+  {
+    "title": "Salatiga Tempo Doeloe",
+    "category": "Budaya",
+    "date": "2026-08-01",
+    "location": "Perpustakaan Daerah Salatiga",
+    "image": "https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop",
+    "description": "Event bernuansa heritage dan sejarah Kota Salatiga.",
+    "url": "https://tourism.salatiga.go.id/event"
+  }
+]
+}

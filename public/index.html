@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salatiga — Harmoni Alam & Budaya</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #2D4636;
+            --color-primary-light: #B1CDB8;
+            --color-primary-accent: #DBF8E1;
+            --color-secondary: #A67B5B;
+            --color-tertiary: #E8E2D6;
+            --color-neutral: #1A1A1A;
+            --color-neutral-light: #F7F6F2;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+
+</head>
+
+<body class="font-body relative text-primary">
+
+    <header id="navbar"
+        class="navbar fixed top-0 left-0 right-0 z-10 p-3 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
+        <div
+            class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
+            <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+            <ul class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Sejarah</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Wisata</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Event</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Akomodasi</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Rencana Perjalanan</a></li>
+            </ul>
+            <div class="absolute top-0 right-0 flex items-center sm:hidden">
+                <button type="button" command="--toggle" commandfor="mobile-menu"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <ul class="">
+                    <li class="py-4"><a href="#" class="block w-100">Home</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Sejarah</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Wisata</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Event</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Akomodasi</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Rencana Perjalanan</a></li>
+                </ul>
+            </el-disclosure>
+        </div>
+    </header>
+
+    <main class="relative bg-white pb-8 px-3 lg:px-4">
+        <section class="hero fixed top-0 left-0 h-[90vh] -z-1 right-0">
+            <div class="relative h-full justify-center pt-16 pb-3 px-4">
+                <div class="bg-primary rounded-lg flex flex-col justify-end px-3 h-full "
+                    style="background-image: url('./asset/images/cover.jpg'); background-size: cover; background-position: center;">
+                    <p class="text-white/90 italic mb-2">Harmoni Alam, Budaya, dan Pengalaman Tak Terlupakan</p>
+                    <h2 class="uppercase text-white text-5xl md:text-7xl font-bold font-display tracking-wide">Salatiga
+                    </h2>
+                </div>
+            </div>
+        </section>
+        <section class="intro mt-[90vh] pt-12 mb-24">
+            <div class="introWrap relative m-auto px-3 py-[5vh] lg:py-[10vh] max-w-3xl text-center">
+                <span class="text-secondary uppercase tracking-widest text-sm font-semibold">
+                    Tentang Salatiga
+                </span>
+                <h2
+                    class="introText relative text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.5] tracking-wide z-1 text-primary-light mt-2">
+                    Sebuah kota kecil di lereng gunung, di mana setiap sudut menghadirkan cerita, rasa, dan kehangatan
+                    yang sulit dilupakan.</h2>
+            </div>
+            <div class="introGallery flex gap-2 lg:gap-4 items-center mx-auto mt-6 mb-12 max-w-3xl">
+                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                </div>
+                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                </div>
+                <div class="w-2/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                </div>
+                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                </div>
+                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                </div>
+            </div>
+            <div class="introDesc relative pb-3 text-center lg:max-w-3xl m-auto">
+                <p class="text-gray-600 leading-8 text-lg">Salatiga bukan sekadar kota—ia adalah cerita yang hidup dari
+                    masa ke masa. Dari jejak Prasasti Plumpungan hingga bangunan kolonial yang masih berdiri anggun,
+                    setiap sudut kota menyimpan kisah tentang perjalanan panjang budaya dan peradaban.</p>
+                <a href="sejarah.html"
+                    class="inline-block py-2 px-4 bg-primary text-white rounded-lg hover:bg-primary-light hover:text-primary mt-4 text-lg leading-8 lg:mt-8 lg:px-6 lg:py-3 lg:text-2xl transition duration-300">Detail
+                    Sejarah Salatiga</a>
+            </div>
+        </section>
+
+        <section class="explore pt-12 mb-40 min-h-[30vh]">
+            <div class="flex flex-col lg:flex-row lg:items-end gap-4 justify-between mb-16">
+
+                <h2 class="text-5xl font-display font-bold text-primary">
+                    <span class="block font-body text-normal text-secondary uppercase tracking-widest text-sm font-semibold mb-4">
+                        Jelajahi
+                    </span>
+                    Wisata Populer
+                </h2>
+                <div class="text-gray-600 lg:max-w-md lg:text-xl mt-6">
+                    Nikmati keindahan alam yang menenangkan dan destinasi yang memanjakan mata
+                    <a href="maps.html"
+                        class="group inline-flex gap-1 py-2 items-center text-primary font-bold border-b-1 hover:border-b-2 lg:text-2xl transition duration-300">Lihat
+                        Semua Wisata
+                        <span class="group-hover:rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-4">
+                                <path fill-rule="evenodd"
+                                    d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div
+                class="exploreTabs flex justify-between my-2 lg:my-6 lg:pt-6 lg:gap-4 lg:justify-evenly mt-16 mb-4 border-b-1">
+                <button class="pb-2 tab-btn active-tab lg:text-2xl transition-all duration-200"
+                    data-tab="all">Semua</button>
+                <button class="pb-2 tab-btn lg:text-2xl transition-all duration-200"
+                    data-tab="kuliner"><span></span>Kuliner</button>
+                <button class="pb-2 tab-btn lg:text-2xl transition-all duration-200" data-tab="wisata">Wisata</button>
+                <button class="pb-2 tab-btn lg:text-2xl transition-all duration-200"
+                    data-tab="akomodasi">Akomodasi</button>
+            </div>
+
+            <div class="tab-panel" data-panel="all">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div
+                        class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Jelajah</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Atraksi</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 col-span-2 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Jelajah</div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="wisata">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div
+                        class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Jelajah</div>
+
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="kuliner">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div
+                        class="card w-full max-h-84 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Atraksi</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 col-span-2 lg:col-span-3 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Jelajah</div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-panel hidden" data-panel="akomodasi">
+                <div class="grid grid-cols-2 lg:grid-cols-8 gap-2 lg:gap-6">
+                    <div
+                        class="card w-full max-h-84 lg:col-span-4 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 lg:col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Jelajah</div>
+
+                        </a>
+                    </div>
+                    <div
+                        class="card w-full max-h-84 col-span-2 overflow-hidden rounded-xl relative aspect-square md:aspect-auto">
+                        <a href="detail.html">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                            <div
+                                class="cardTag absolute right-2 bottom-2 bg-white px-3 py-2 rounded-full text-sm leading-none">
+                                Kuliner</div>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="trivia mb-40">
+
+            <div class="mb-16">
+
+                <span class="text-secondary uppercase tracking-widest text-sm font-semibold">
+                    Tahukah Kamu?
+                </span>
+
+                <h2 class="font-display text-5xl font-bold text-primary mt-4">
+                    Fakta Tentang Salatiga
+                </h2>
+
+                <p class="mt-6 text-gray-600 leading-8 text-lg">
+                    Kota kecil yang sejuk ini menyimpan banyak cerita unik,
+                    mulai dari sejarah kuno, keberagaman budaya, hingga
+                    prestasi yang membuat Salatiga dikenal di tingkat nasional.
+                </p>
+
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/01</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Kota Tertua di Jawa Tengah
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                        Hari Jadi Salatiga ditetapkan berdasarkan Prasasti
+                        Plumpungan yang bertanggal 24 Juli 750 Masehi,
+                        menjadikannya salah satu kota tertua di Indonesia.
+                    </p>
+
+                </div>
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/02</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Dijuluki Kota Tertoleran
+                    </h3>
+
+                    <p class="leading-7">
+                        Salatiga beberapa kali dinobatkan sebagai salah satu
+                        kota paling toleran di Indonesia karena keberagaman
+                        masyarakat dan kerukunan antarumat beragama.
+                    </p>
+
+                </div>
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/03</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Dikelilingi Pegunungan
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                        Salatiga berada di antara Gunung Merbabu,
+                        Telomoyo, dan Ungaran yang membuat udaranya
+                        sejuk sepanjang tahun.
+                    </p>
+
+                </div>
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/04</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Kota Pendidikan
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                        Kehadiran berbagai perguruan tinggi dan sekolah
+                        menjadikan Salatiga sebagai salah satu pusat
+                        pendidikan penting di Jawa Tengah.
+                    </p>
+
+                </div>
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/05</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Surga Pecinta Olahraga
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                        Kontur kota yang berbukit dan udara yang segar
+                        membuat Salatiga menjadi destinasi favorit untuk
+                        bersepeda, lari, dan olahraga luar ruang.
+                    </p>
+
+                </div>
+
+                <div class="bg-neutral-light rounded-3xl p-4 text-primary">
+
+                    <div class="text-xl mb-6 text-secondary">/06</div>
+
+                    <h3 class="text-2xl font-semibold mb-4">
+                        Dekat dengan Jalur Kopi Jawa
+                    </h3>
+
+                    <p class="text-gray-600 leading-7">
+                        Lokasinya yang strategis di kawasan pegunungan
+                        membuat Salatiga memiliki banyak kedai kopi dan
+                        akses mudah menuju perkebunan kopi di sekitarnya.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+        <section class="itenary mb-40">
+            <div class="flex flex-col lg:flex-row lg:items-end gap-4 justify-between mb-16">
+
+                <h2 class="text-5xl font-display font-bold text-primary">
+                    <span class="block font-body text-normal text-secondary uppercase tracking-widest text-sm font-semibold mb-4">
+                        Rekomendasi
+                    </span>
+                    Rencana Perjalanan
+                </h2>
+                <div class="text-gray-600 lg:max-w-md lg:text-xl mt-6">
+                    Temukan rencana perjalanan yang dirancang khusus untuk membantu Anda menjelajahi keindahan Salatiga
+                    dengan mudah dan menyenangkan.
+                    <a href="maps.html"
+                        class="group w-fit flex gap-1 py-2 items-center text-primary font-bold border-b-1 hover:border-b-2 lg:text-2xl transition duration-300">Lihat
+                        Semua Wisata
+                        <span class="group-hover:rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-4">
+                                <path fill-rule="evenodd"
+                                    d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 lg:gap-6">
+                <div class="aspect-square rounded-xl overflow-hidden relative">
+                    <a href="detail.html" class="flex flex-col w-full h-full justify-end">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                            class="w-full h-full object-cover absolute inset-0 z-1" />
+                        <div class="cardDetail mt-2 relative z-2 p-4 text-white">
+                            <h3 class="font-bold text-lg">Jelajahi Salatiga dalam 8 Jam</h3>
+                            <p class="">Nikmati keindahan Salatiga dalam 8 jam</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="aspect-square rounded-xl overflow-hidden relative">
+                    <a href="detail.html" class="flex flex-col w-full h-full justify-end">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                            class="w-full h-full object-cover absolute inset-0 z-1" />
+                        <div class="cardDetail mt-2 relative z-2 p-4 text-white">
+                            <h3 class="font-bold text-lg">Trip 3 Hari 2 Malam</h3>
+                            <p class="">Eksplore keindahan Salatiga dalam 3 hari 2 malam</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="events mb-20">
+            <div class="flex flex-col lg:flex-row gap-4 pb-4">
+                <div class="flex flex-col lg:items-end gap-4 justify-between mb-16">
+
+                    <h2 class="text-5xl font-display font-bold text-primary">
+                        <span
+                            class="block font-body text-normal text-secondary uppercase tracking-widest text-sm font-semibold mb-4">
+                            Temukan
+                        </span>
+                        Acara & Festival
+                    </h2>
+                    <div class="text-gray-600 lg:max-w-md lg:text-xl mt-6">
+                        Daftar acara dan festival yang meriah di Salatiga, mulai dari perayaan budaya hingga event musik
+                        yang memikat.
+                        <a href="maps.html"
+                            class="group w-fit flex gap-1 py-2 items-center text-primary font-bold border-b-1 hover:border-b-2 lg:text-2xl transition duration-300">Lihat
+                            Semua Wisata
+                            <span class="group-hover:rotate-45">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                    class="size-4">
+                                    <path fill-rule="evenodd"
+                                        d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden">
+                    <div id="eventsTrack" class="flex flex-nowrap gap-4 transition-transform duration-400 ease-in-out">
+                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                            <a href="detail.html">
+                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2">
+                                    <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                            <a href="detail.html">
+                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2">
+                                    <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                            <a href="detail.html">
+                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2">
+                                    <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
+                            <a href="detail.html">
+                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                        class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2">
+                                    <h3 class="font-bold text-lg">Destinasi Wisata</h3>
+                                </div>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="">
+
+            <div class="container">
+
+                <div class="bg-gradient-to-r bg-primary rounded-lg px-4 py-8 text-center text-white">
+
+                    <h2 class="text-5xl font-display font-bold mb-6">
+                        Siap Menjelajahi Salatiga?
+                    </h2>
+
+                    <p class="max-w-2xl mx-auto mb-10">
+                        Temukan lebih banyak destinasi, kuliner khas, budaya,
+                        dan pengalaman menarik lainnya di Kota Salatiga.
+                    </p>
+
+                    <a href="maps.html"
+                        class="group inline-flex gap-1 items-center py-2 border-b-1 border-white hover:border-b-2 duration-300 transition">
+                        Jelajahi Destinasi Lain
+                        <span class="group-hover:rotate-45">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-4">
+                                <path fill-rule="evenodd"
+                                    d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- INSTANSI TERKAIT -->
+        <section class="flex gap-4 lg:gap-8 flex-wrap justify-center pt-20">
+            <!-- <div class="overflow-hidden"> -->
+                <!-- <div class=" partner-track"> -->
+                    <!-- logo-logo -->
+                    <a href="#"
+                            class="">
+
+                            <img src="images/logo-dispar.png" alt="Dinas Pariwisata"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+                        </a>
+
+                        <!-- Kominfo -->
+                        <a href="#"
+                            class="">
+
+                            <img src="images/logo-kominfo.png" alt="Kominfo"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+
+                        </a>
+
+                        <!-- Bappeda -->
+                        <a href="#"
+                            class="">
+
+                            <img src="images/logo-bappeda.png" alt="Bappeda"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+                        </a>
+
+                        <!-- Disbud -->
+                        <a href="#"
+                            class="">
+
+                            <img src="images/logo-disbud.png" alt="Dinas Kebudayaan"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+                        </a>
+
+                        <!-- BPS -->
+                        <a href="#"
+                            class="">
+
+                            <img src="images/logo-bps.png" alt="BPS Salatiga"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+
+                        </a>
+
+                        <!-- Pemerintah Kota -->
+                        <a href="#"
+                            class="">
+
+                            <img src="images/logo-salatiga.png" alt="Pemerintah Kota Salatiga"
+                                class="h-16 object-contain grayscale group-hover:grayscale-0 transition">
+
+                        </a>
+                <!-- </div> -->
+            <!-- </div> -->
+        </section>
+
+    </main>
+    <footer
+        class="footer bg-primary text-white pt-4 px-4 min-h-[30vh]">
+        <div class="grid lg:grid-cols-10 gap-8 mb-8 text-white">
+            <div class="lg:col-span-5">
+                <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+                <p class="text-white/70 leading-8 max-w-md">
+                    Dedikasi website untuk Kota Salatiga.
+                </p>
+
+                <div class="flex gap-4 mt-8">
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-instagram-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-facebook-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-youtube-line"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+            <div class="lg:col-span-2">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Jelajahi
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="#sejarah" class="hover:text-white transition">
+                            Sejarah
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#budaya" class="hover:text-white transition">
+                            Budaya
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#wisata" class="hover:text-white transition">
+                            Wisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kuliner" class="hover:text-white transition">
+                            Kuliner
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="lg:col-span-3">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Instansi Terkait
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="https://salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Pemerintah Kota Salatiga
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tourism.salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Dinas Pariwisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://salatigakota.bps.go.id" target="_blank" class="hover:text-white transition">
+                            BPS Kota Salatiga
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div class="border-t border-white py-4">
+
+            <div class="flex flex-col md:flex-row gap-1 lg:gap-4">
+
+                <p class="text-white/80 text-sm">
+                    © 2026 All Rights Reserved.
+                </p>
+
+                <div class="flex gap-6 text-sm text-white/80">
+
+                    <a href="credits.html">
+                        Credits
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms of Use
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="mb-16">
+            <img src="asset/images/logo-footer.svg" class="w-full" />
+        </div>
+        
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <script src="asset/js/gsap.min.js"></script>
+    <script src="asset/js/GSDevTools.min.js"></script>
+    <script src="asset/js/ScrollTrigger.min.js"></script>
+    <script src="asset/js/SplitText.min.js"></script>
+
+    <script src="asset/js/main.js"></script>
+
+</body>
+
+</html>

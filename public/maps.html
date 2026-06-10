@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Peta Wisata Salatiga</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  />
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      background:#f5f5f5;
+      overflow:hidden;
+    }
+
+    .app{
+      display:flex;
+      height:100vh;
+      width:100%;
+    }
+
+    /* SIDEBAR */
+    .sidebar{
+      width:380px;
+      background:#fff;
+      overflow-y:auto;
+      border-right:1px solid #ddd;
+      padding:20px;
+    }
+
+    .sidebar h1{
+      font-size:28px;
+      margin-bottom:10px;
+      color:#1f3d2b;
+    }
+
+    .sidebar p{
+      font-size:14px;
+      color:#666;
+      margin-bottom:20px;
+    }
+
+    /* FILTER */
+    .filters{
+      display:flex;
+      gap:10px;
+      margin-bottom:20px;
+      flex-wrap:wrap;
+    }
+
+    .filter-btn{
+      border:none;
+      padding:10px 16px;
+      border-radius:999px;
+      cursor:pointer;
+      background:#eee;
+      transition:.3s;
+    }
+
+    .filter-btn.active{
+      background:#1f3d2b;
+      color:#fff;
+    }
+
+    /* SEARCH */
+    .search-box{
+      width:100%;
+      padding:14px;
+      border-radius:12px;
+      border:1px solid #ddd;
+      margin-bottom:20px;
+      outline:none;
+    }
+
+    /* CARD */
+    .place-list{
+      display:flex;
+      flex-direction:column;
+      gap:16px;
+    }
+
+    .place-card{
+      background:#fff;
+      border-radius:18px;
+      overflow:hidden;
+      cursor:pointer;
+      transition:.3s;
+      border:1px solid #eee;
+      box-shadow:0 4px 10px rgba(0,0,0,.05);
+    }
+
+    .place-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 10px 20px rgba(0,0,0,.12);
+    }
+
+    .place-card img{
+      width:100%;
+      height:180px;
+      object-fit:cover;
+    }
+
+    .place-content{
+      padding:16px;
+    }
+
+    .place-category{
+      font-size:12px;
+      color:#e89b3a;
+      text-transform:uppercase;
+      margin-bottom:8px;
+      font-weight:bold;
+    }
+
+    .place-title{
+      font-size:20px;
+      margin-bottom:8px;
+      color:#1f3d2b;
+    }
+
+    .place-desc{
+      font-size:14px;
+      color:#666;
+      line-height:1.5;
+    }
+
+    /* MAP */
+    .map-wrapper{
+      flex:1;
+      position:relative;
+    }
+
+    #map{
+      width:100%;
+      height:100%;
+    }
+
+    /* POPUP */
+    .popup-img{
+      width:100%;
+      border-radius:10px;
+      margin-bottom:10px;
+    }
+
+    .popup-title{
+      font-size:16px;
+      font-weight:bold;
+      margin-bottom:6px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+
+      body{
+        overflow:auto;
+      }
+
+      .app{
+        flex-direction:column;
+      }
+
+      .sidebar{
+        width:100%;
+        height:45vh;
+      }
+
+      .map-wrapper{
+        height:55vh;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <h1>Salatiga Maps</h1>
+    <p>
+      Temukan rekomendasi wisata, hotel, dan kuliner terbaik di Salatiga.
+    </p>
+
+    <input
+      type="text"
+      id="searchInput"
+      class="search-box"
+      placeholder="Cari tempat..."
+    >
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Semua</button>
+      <button class="filter-btn" data-filter="wisata">Wisata</button>
+      <button class="filter-btn" data-filter="kuliner">Kuliner</button>
+      <button class="filter-btn" data-filter="hotel">Hotel</button>
+    </div>
+
+    <div class="place-list" id="placeList"></div>
+
+  </div>
+
+  <!-- MAP -->
+  <div class="map-wrapper">
+    <div id="map"></div>
+  </div>
+
+</div>
+
+<script>
+
+  // =========================
+  // DATA
+  // =========================
+
+  const places = [
+
+    {
+      id:1,
+      category:"wisata",
+      title:"Rawa Pening",
+      description:"Danau alami dengan panorama pegunungan yang indah.",
+      lat:-7.2706,
+      lng:110.4261,
+      image:"https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      id:2,
+      category:"wisata",
+      title:"Gunung Merbabu",
+      description:"Destinasi pendakian favorit dengan view spektakuler.",
+      lat:-7.4542,
+      lng:110.4408,
+      image:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      id:3,
+      category:"kuliner",
+      title:"Sate Sapi Suruh",
+      description:"Kuliner legendaris khas Salatiga yang wajib dicoba.",
+      lat:-7.329,
+      lng:110.492,
+      image:"https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      id:4,
+      category:"kuliner",
+      title:"Ronde Jago",
+      description:"Minuman hangat khas Salatiga dengan rasa autentik.",
+      lat:-7.331,
+      lng:110.503,
+      image:"https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      id:5,
+      category:"hotel",
+      title:"Laras Asri Resort",
+      description:"Hotel resort nyaman dengan suasana alam sejuk.",
+      lat:-7.324,
+      lng:110.501,
+      image:"https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=1200&auto=format&fit=crop"
+    },
+
+    {
+      id:6,
+      category:"hotel",
+      title:"Kayu Arum Resort",
+      description:"Akomodasi premium dengan nuansa tradisional Jawa.",
+      lat:-7.319,
+      lng:110.497,
+      image:"https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=1200&auto=format&fit=crop"
+    }
+
+  ];
+
+  // =========================
+  // LEAFLET MAP
+  // =========================
+
+  const map = L.map('map').setView([-7.3317, 110.5084], 12);
+
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      attribution:'© OpenStreetMap'
+    }
+  ).addTo(map);
+
+  // =========================
+  // ICONS
+  // =========================
+
+  function createIcon(color){
+
+    return new L.Icon({
+      iconUrl:`https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-${color}.png`,
+      shadowUrl:'https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png',
+      iconSize:[25,41],
+      iconAnchor:[12,41]
+    });
+
+  }
+
+  const icons = {
+    wisata:createIcon('green'),
+    kuliner:createIcon('orange'),
+    hotel:createIcon('blue')
+  };
+
+  // =========================
+  // MARKERS
+  // =========================
+
+  let markers = [];
+
+  function renderMarkers(data){
+
+    markers.forEach(marker => map.removeLayer(marker));
+    markers = [];
+
+    data.forEach(place => {
+
+      const marker = L.marker(
+        [place.lat, place.lng],
+        { icon: icons[place.category] }
+      ).addTo(map);
+
+      marker.bindPopup(`
+        <div>
+          <img class="popup-img" src="${place.image}">
+          <div class="popup-title">${place.title}</div>
+          <p>${place.description}</p>
+        </div>
+      `);
+
+      markers.push(marker);
+
+    });
+
+  }
+
+  // =========================
+  // SIDEBAR LIST
+  // =========================
+
+  const placeList = document.getElementById('placeList');
+
+  function renderList(data){
+
+    placeList.innerHTML = "";
+
+    data.forEach(place => {
+
+      const card = document.createElement('div');
+
+      card.className = "place-card";
+
+      card.innerHTML = `
+        <img src="${place.image}">
+        <div class="place-content">
+          <div class="place-category">${place.category}</div>
+          <div class="place-title">${place.title}</div>
+          <div class="place-desc">${place.description}</div>
+        </div>
+      `;
+
+      // FLY TO LOCATION
+      card.addEventListener('click', () => {
+
+        map.flyTo(
+          [place.lat, place.lng],
+          15,
+          {
+            duration:1.5
+          }
+        );
+
+        markers.forEach(marker => {
+
+          const latlng = marker.getLatLng();
+
+          if(
+            latlng.lat === place.lat &&
+            latlng.lng === place.lng
+          ){
+            marker.openPopup();
+          }
+
+        });
+
+      });
+
+      placeList.appendChild(card);
+
+    });
+
+  }
+
+  // =========================
+  // FILTER
+  // =========================
+
+  const filterButtons = document.querySelectorAll('.filter-btn');
+
+  let currentFilter = "all";
+
+  filterButtons.forEach(button => {
+
+    button.addEventListener('click', () => {
+
+      filterButtons.forEach(btn =>
+        btn.classList.remove('active')
+      );
+
+      button.classList.add('active');
+
+      currentFilter = button.dataset.filter;
+
+      applyFilters();
+
+    });
+
+  });
+
+  // =========================
+  // SEARCH
+  // =========================
+
+  const searchInput = document.getElementById('searchInput');
+
+  searchInput.addEventListener('input', applyFilters);
+
+  // =========================
+  // APPLY FILTER
+  // =========================
+
+  function applyFilters(){
+
+    const searchValue =
+      searchInput.value.toLowerCase();
+
+    const filtered = places.filter(place => {
+
+      const matchCategory =
+        currentFilter === "all" ||
+        place.category === currentFilter;
+
+      const matchSearch =
+        place.title.toLowerCase().includes(searchValue);
+
+      return matchCategory && matchSearch;
+
+    });
+
+    renderList(filtered);
+    renderMarkers(filtered);
+
+  }
+
+  // INIT
+  applyFilters();
+
+</script>
+
+</body>
+</html>

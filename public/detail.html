@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="asset/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+            --color-primary: #2D4636;
+            --color-primary-light: #B1CDB8;
+            --color-primary-accent: #DBF8E1;
+            --color-secondary: #A67B5B;
+            --color-tertiary: #E8E2D6;
+            --color-neutral: #1A1A1A;
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'Plus Jakarta Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="navbar"
+        class="navbar fixed top-0 left-0 right-0 w-full z-10 p-2 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
+        <div
+            class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
+            <a href="#" class="logo">Salatiga</a>
+            <ul class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Districts</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Events</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Accomodation</a></li>
+            </ul>
+            <div class="absolute top-0 right-0 flex items-center sm:hidden">
+                <button type="button" command="--toggle" commandfor="mobile-menu"
+                    class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/5 hover:text-white focus:outline-2 focus:-outline-offset-1 focus:outline-indigo-500">
+                    <span class="absolute -inset-0.5"></span>
+                    <span class="sr-only">Open main menu</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 in-aria-expanded:hidden">
+                        <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon"
+                        aria-hidden="true" class="size-6 not-in-aria-expanded:hidden">
+                        <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
+                <ul class="">
+                    <li class="py-4"><a href="#" class="block w-100">Home</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Districts</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Events</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Accomodation</a></li>
+                    <li class="py-4"><a href="#" class="block w-100">Contact</a></li>
+                </ul>
+            </el-disclosure>
+        </div>
+    </header>
+    <main class="bg-[#F7F6F2]">
+
+        <!-- HERO -->
+        <section class="relative h-[70vh] overflow-hidden">
+
+            <img src="images/rawa-pening.jpg" alt="Rawa Pening" class="absolute inset-0 w-full h-full object-cover">
+
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+            <div class="container mx-auto px-6 h-full flex items-end relative z-10 pb-20">
+
+                <div class="max-w-4xl text-white">
+
+                    <span class="inline-flex px-4 py-2 rounded-full bg-white/20 backdrop-blur">
+                        Wisata Alam
+                    </span>
+
+                    <h1 class="text-5xl md:text-7xl font-bold mt-6 mb-4">
+                        Rawa Pening
+                    </h1>
+
+                    <p class="text-xl text-white/80">
+                        Danau alami ikonik di kaki Gunung Merbabu dengan panorama alam yang memukau.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- INFO -->
+        <section class="py-16">
+
+            <div class="container mx-auto px-6">
+
+                <div class="grid lg:grid-cols-4 gap-8">
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <h3 class="text-sm uppercase tracking-widest text-[#A67B5B] mb-2">
+                            Lokasi
+                        </h3>
+
+                        <p class="font-semibold">
+                            Kecamatan Tuntang, Kabupaten Semarang
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <h3 class="text-sm uppercase tracking-widest text-[#A67B5B] mb-2">
+                            Jam Operasional
+                        </h3>
+
+                        <p class="font-semibold">
+                            06.00 - 18.00 WIB
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <h3 class="text-sm uppercase tracking-widest text-[#A67B5B] mb-2">
+                            Harga Tiket
+                        </h3>
+
+                        <p class="font-semibold">
+                            Rp 10.000 - Rp 25.000
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <h3 class="text-sm uppercase tracking-widest text-[#A67B5B] mb-2">
+                            Kategori
+                        </h3>
+
+                        <p class="font-semibold">
+                            Wisata Alam
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="pb-24">
+
+            <div class="container mx-auto px-6">
+
+                <div class="grid md:grid-cols-3 gap-6">
+
+                    <img src="images/rawa1.jpg" class="rounded-3xl h-[400px] object-cover w-full">
+
+                    <img src="images/rawa2.jpg" class="rounded-3xl h-[400px] object-cover w-full">
+
+                    <img src="images/rawa3.jpg" class="rounded-3xl h-[400px] object-cover w-full">
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="pb-24">
+
+            <div class="container mx-auto px-6">
+
+                <div class="max-w-4xl">
+
+                    <span class="text-[#A67B5B] uppercase tracking-widest text-sm font-semibold">
+                        Tentang Destinasi
+                    </span>
+
+                    <h2 class="text-5xl font-bold text-[#2D4636] mt-4 mb-8">
+                        Keindahan Alam yang Menjadi Ikon Salatiga
+                    </h2>
+
+                    <div class="space-y-6 text-gray-600 leading-8 text-lg">
+
+                        <p>
+                            Rawa Pening merupakan danau alami yang terletak di antara
+                            beberapa kecamatan di sekitar Salatiga dan Kabupaten Semarang.
+                            Destinasi ini terkenal dengan panorama pegunungan,
+                            aktivitas perahu wisata, serta keindahan matahari terbit.
+                        </p>
+
+                        <p>
+                            Selain menjadi objek wisata, kawasan ini juga memiliki
+                            nilai ekologis yang penting sebagai sumber air dan habitat
+                            berbagai jenis flora dan fauna.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="pb-24">
+
+            <div class="container mx-auto px-6">
+
+                <h2 class="text-4xl font-bold text-[#2D4636] mb-10">
+                    Fasilitas
+                </h2>
+
+                <div class="grid md:grid-cols-4 gap-6">
+
+                    <div class="bg-white rounded-3xl p-8">
+                        🚻 Toilet
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8">
+                        🚗 Parkir
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8">
+                        🍽 Kuliner
+                    </div>
+
+                    <div class="bg-white rounded-3xl p-8">
+                        📸 Spot Foto
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="pb-24">
+
+            <div class="container mx-auto px-6">
+
+                <div class="flex justify-between items-end mb-10">
+
+                    <div>
+
+                        <span class="text-[#A67B5B] uppercase tracking-widest text-sm font-semibold">
+                            Lokasi
+                        </span>
+
+                        <h2 class="text-5xl font-bold text-[#2D4636] mt-4">
+                            Peta Destinasi
+                        </h2>
+
+                    </div>
+
+                </div>
+
+                <div id="destinationMap" class="rounded-[32px] overflow-hidden h-[600px] shadow-xl"></div>
+
+            </div>
+
+        </section>
+        <section class="pb-32">
+
+            <div class="container mx-auto px-6">
+
+                <div class="flex justify-between items-center mb-12">
+
+                    <h2 class="text-5xl font-bold text-[#2D4636]">
+                        Wisata Terkait
+                    </h2>
+
+                    <a href="/wisata" class="text-[#2D4636] font-semibold">
+                        Lihat Semua →
+                    </a>
+
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <article
+                        class="group bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all">
+
+                        <img src="images/merbabu.jpg"
+                            class="h-[280px] w-full object-cover group-hover:scale-105 transition duration-700">
+
+                        <div class="p-8">
+
+                            <span class="text-[#A67B5B] text-sm">
+                                Wisata Alam
+                            </span>
+
+                            <h3 class="text-2xl font-semibold mt-3 mb-3">
+                                Gunung Merbabu
+                            </h3>
+
+                            <a href="#">
+                                Lihat Detail →
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    <!-- Repeat Card -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer bg-primary text-wite sticky bottom-0 left-0 right-0 pt-4 px-4 -z-1 min-h-[30vh]">
+        <div class="flex justify-between md:justify-start gap-8 mb-4">
+            <div class="flex flex-col gap-2">
+                <h2 class="font-semibold">Link</h2>
+                <a href="#" class="text-white">Agenda</a>
+                <a href="#" class="text-white">Akomodasi</a>
+                <a href="#" class="text-white">Peta</a>
+            </div>
+            <div class="flex flex-col gap-2">
+                <h2 class="font-semibold">Informasi</h2>
+                <a href="#" class="text-white">Kontak</a>
+                <a href="#" class="text-white">Portal Pemerintah</a>
+                <a href="#" class="text-white">Lisensi</a>
+            </div>
+        </div>
+        <p class="mt-8 text-sm text-white">&copy; 2026 Salatiga. All rights reserved.</p>
+        <div class="">
+            <img src="asset/images/logo-footer.svg" class="w-full" />
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <script src="asset/js/gsap.min.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('destinationMap')
+            .setView([-7.2706, 110.4261], 13);
+
+        L.tileLayer(
+            'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+            {
+                attribution: '© OpenStreetMap'
+            }
+        ).addTo(map);
+
+        L.marker([-7.2706, 110.4261])
+            .addTo(map)
+            .bindPopup("Rawa Pening")
+            .openPopup();
+
+        gsap.from(".destination-info", {
+            y: 60,
+            opacity: 0,
+            duration: 1
+        });
+
+        gsap.from(".gallery img", {
+            scale: 0.9,
+            opacity: 0,
+            stagger: 0.2,
+            duration: 1
+        });
+
+        gsap.from("#destinationMap", {
+            y: 80,
+            opacity: 0,
+            scrollTrigger: {
+                trigger: "#destinationMap",
+                start: "top 80%"
+            }
+        });
+    </script>
+</body>
+
+</html>
