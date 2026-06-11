@@ -8,7 +8,9 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="asset/css/style.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -21,6 +23,7 @@
             --color-secondary: #A67B5B;
             --color-tertiary: #E8E2D6;
             --color-neutral: #1A1A1A;
+            --color-neutral-light: #F7F6F2;
             --font-display: 'Syne', sans-serif;
             --font-body: 'Plus Jakarta Sans', sans-serif;
         }
@@ -30,11 +33,12 @@
 
 <body class="font-body relative text-primary">
 
-    <header id="navbar" class="navbar fixed top-0 left-0 right-0 w-full z-10 p-2 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
-        <div class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
-            <a href="#" class="logo font-display uppercase">Salatiga</a>
-            <ul
-                class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
+    <header id="navbar"
+        class="navbar fixed top-0 left-0 right-0 z-10 p-3 will-change-transform transition-[transform .4s ease, background .3s ease, backdrop-filter .3s ease]">
+        <div
+            class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
+            <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+            <ul class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
                 <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
                 <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Sejarah</a></li>
                 <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Wisata</a></li>
@@ -71,20 +75,40 @@
         </div>
     </header>
 
-    <main class="relative bg-white pb-8">
-        <section class="districts min-h-screen px-4">
+    <main class="relative bg-white min-h-screen px-3 lg:px-4 pt-16">
+        <!-- HERO -->
+        <section class="py-16 bg-primary text-white rounded-lg">
+
+            <div class="container mx-auto px-6">
+
+                <div class="max-w-4xl">
+
+                    <span class="uppercase tracking-widest text-sm font-semibold">
+                        fakta
+                    </span>
+
+                    <h1 class="text-6xl font-bold mt-2 mb-6">
+                        Sejarah Kota Salatiga
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </section>
+        <section class="districts min-h-screen px-4 py-16">
             <div class="districtsMap">
                 <p class="textDesc mt-2">Salatiga terdiri dari 4 kecamatan yang masing-masing memiliki karakteristik unik. Berikut adalah peta interaktif yang menunjukkan pembagian wilayah dan beberapa titik menarik di setiap kecamatan.</p>
                 <div class="mapContainer mt-4">
                     <img src="asset/images/peta.png" class="w-full h-auto object-cover rounded-lg" />
                 </div>
             </div>
-            <div class="distictsHistory">
+            <div class="distictsHistory mt-16">
                 <h2 class="titleSub text-display text-3xl font-semibold text-secondary">Sejarah</h2>
                 <p class="textDesc mt-2">Kota Salatiga memiliki kisah sejarah yang panjang. Kota yang sudah berdiri
                     sejak 750M ini telah melewati berbagai peradaban dan budaya, menciptakan identitas unik yang masih
                     terasa hingga kini. Berikut sedikit ringkasan sejarah kota ini.</p>
-                <div class="historyTimeline">
+                <!-- <div class="historyTimeline">
                     <div class="timelineItem">
                         <div class="timelineDot"></div>
                         <div class="timelineCard">
@@ -159,39 +183,240 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+                <div class="historyTimeline max-w-6xl">
+                    <div class="timelineItem flex flex-col lg:flex-row">
+                        <div class="timelineImg">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <!-- <div class="timelineDot"></div> -->
+                        <div class="timelineCard">
+                            <div class="timelineContent">
+                                <h3>750 M</h3>
+                                <h4>Prasasti Plumpungan</h4>
+                                <p>
+                                    Tonggak sejarah Kota Salatiga bermula dari Prasasti Plumpungan yang
+                                    bertanggal 24 Juli 750 Masehi. Dalam prasasti tersebut disebutkan
+                                    wilayah "Hampra" yang kemudian dipercaya sebagai asal mula nama
+                                    Salatiga. Tanggal ini kini diperingati sebagai Hari Jadi Kota Salatiga.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timelineItem flex flex-col lg:flex-row-revese">
+                        <div class="timelineImg">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="timelineCard">
+                            <div class="timelineContent">
+                                <h3>Abad XV–XVII</h3>
+                                <h4>Pusat Persinggahan Perdagangan</h4>
+                                <p>
+                                    Letaknya yang strategis di antara Semarang, Solo, dan Yogyakarta
+                                    menjadikan Salatiga sebagai jalur penting perdagangan dan mobilitas
+                                    masyarakat Jawa. Kawasan ini berkembang sebagai daerah persinggahan
+                                    yang ramai dan multikultural.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timelineItem flex flex-col lg:flex-row">
+                        <!-- <div class="timelineDot"></div> -->
+                        <div class="timelineImg">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="timelineCard">
+                            <div class="timelineContent">
+                                <h3>1746</h3>
+                                <h4>Perjanjian Salatiga</h4>
+                                <p>
+                                    Salatiga menjadi saksi sejarah Perjanjian Salatiga yang melibatkan
+                                    VOC dan Kerajaan Mataram. Peristiwa ini menjadi bagian penting dalam
+                                    pembentukan peta politik Jawa pada masa kolonial.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timelineItem flex flex-col lg:flex-row-revese">
+                        <!-- <div class="timelineDot"></div> -->
+                        <div class="timelineImg">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="timelineCard">
+                            <div class="timelineContent">
+                                <h3>1917</h3>
+                                <h4>Kota Gemeente Hindia Belanda</h4>
+                                <p>
+                                    Pemerintah Hindia Belanda menetapkan Salatiga sebagai Gemeente atau
+                                    kota otonom. Pada masa ini dibangun berbagai fasilitas publik,
+                                    kawasan permukiman Eropa, sekolah, dan infrastruktur yang membentuk
+                                    karakter kota hingga saat ini.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timelineItem flex flex-col lg:flex-row">
+                        <!-- <div class="timelineDot"></div> -->
+                        <div class="timelineImg">
+                            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
+                                class="w-full h-full object-cover" />
+                        </div>
+                        <div class="timelineCard">
+                            <div class="timelineContent">
+                                <h3>1950–Sekarang</h3>
+                                <h4>Kota Pendidikan dan Wisata</h4>
+                                <p>
+                                    Setelah kemerdekaan Indonesia, Salatiga berkembang sebagai kota
+                                    pendidikan, perdagangan, dan pariwisata. Keberadaan berbagai
+                                    institusi pendidikan serta lingkungan alam yang sejuk menjadikan
+                                    Salatiga dikenal sebagai salah satu kota ternyaman di Indonesia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="footer bg-primary text-wite sticky bottom-0 left-0 right-0 pt-4 px-4 -z-1 min-h-[30vh]">
-        <div class="flex justify-between md:justify-start gap-8 mb-4">
-            <div class="flex flex-col gap-2">
-                <h2 class="font-semibold">Link</h2>
-                <a href="#" class="text-white">Agenda</a>
-                <a href="#" class="text-white">Akomodasi</a>
-                <a href="#" class="text-white">Peta</a>
+
+    <footer
+        class="footer bg-primary text-white pt-4 px-4 min-h-[30vh]">
+        <div class="grid lg:grid-cols-10 gap-8 mb-8 text-white">
+            <div class="lg:col-span-5">
+                <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
+                <p class="text-white/70 leading-8 max-w-md">
+                    Dedikasi website untuk Kota Salatiga.
+                </p>
+
+                <div class="flex gap-4 mt-8">
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-instagram-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-facebook-line"></i>
+
+                    </a>
+
+                    <a href="#"
+                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
+
+                        <i class="ri-youtube-line"></i>
+
+                    </a>
+
+                </div>
+
             </div>
-            <div class="flex flex-col gap-2">
-                <h2 class="font-semibold">Informasi</h2>
-                <a href="#" class="text-white">Kontak</a>
-                <a href="#" class="text-white">Portal Pemerintah</a>
-                <a href="#" class="text-white">Lisensi</a>
+            <div class="lg:col-span-2">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Jelajahi
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="#sejarah" class="hover:text-white transition">
+                            Sejarah
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#budaya" class="hover:text-white transition">
+                            Budaya
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#wisata" class="hover:text-white transition">
+                            Wisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#kuliner" class="hover:text-white transition">
+                            Kuliner
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+            <div class="lg:col-span-3">
+
+                <h3 class="font-semibold text-xl mb-3">
+                    Instansi Terkait
+                </h3>
+
+                <ul class="space-y-2 text-white/70">
+
+                    <li>
+                        <a href="https://salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Pemerintah Kota Salatiga
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://tourism.salatiga.go.id" target="_blank" class="hover:text-white transition">
+                            Dinas Pariwisata
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://salatigakota.bps.go.id" target="_blank" class="hover:text-white transition">
+                            BPS Kota Salatiga
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
         </div>
-        <p class="mt-8 text-sm text-white">&copy; 2026 Salatiga. All rights reserved.</p>
-        <div class="">
+        <div class="mb-16">
             <img src="asset/images/logo-footer.svg" class="w-full" />
         </div>
+        <div class="border-t border-white py-4">
+
+            <div class="flex flex-col md:flex-row gap-1 lg:gap-4">
+
+                <p class="text-white/80 text-sm">
+                    © 2026 All Rights Reserved.
+                </p>
+
+                <div class="flex gap-6 text-sm text-white/80">
+
+                    <a href="credits.html">
+                        Credits
+                    </a>
+
+                    <a href="privacy-policy.html">
+                        Privacy Policy
+                    </a>
+
+                    <a href="terms.html">
+                        Terms of Use
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+        
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-
-    <script src="asset/js/gsap.min.js"></script>
-    <script src="asset/js/GSDevTools.min.js"></script>
-    <script src="asset/js/ScrollTrigger.min.js"></script>
-    <script src="asset/js/SplitText.min.js"></script>
-
-    <script src="asset/js/main.js"></script>
 
 </body>
 
