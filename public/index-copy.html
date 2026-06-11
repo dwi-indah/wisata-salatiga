@@ -15,6 +15,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+
     <style type="text/tailwindcss">
         @theme {
             --color-primary: #2D4636;
@@ -502,9 +503,9 @@
             </div>
         </section>
 
-        <section class="events mb-20">
-            <div class="flex flex-col lg:flex-row gap-4 lg: gap-8 pb-4 items-start">
-                <div class="flex flex-col lg:items-end gap-4 justify-between mb-16">
+        <section class="events mb-20 ">
+            <div class="flex flex-col lg:flex-row gap-4 lg: gap-8 pb-4 items-start overflow-hidden">
+                <div class="flex flex-col lg:items-end gap-4 justify-between px-3 lg:px-4">
 
                     <h2 class="text-5xl font-display font-bold text-primary">
                         <span
@@ -528,31 +529,35 @@
                             </span>
                         </a>
                     </div>
-                    <div class="flex gap-2">
-                        <button id="eventsPrev" aria-label="Sebelumnya"
-                            class="events-nav-btn w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center transition-all duration-200 hover:bg-primary hover:text-white hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                                <path d="M15 18l-6-6 6-6"/>
+                </div>
+                <div class="flex gap-4 mb-12">
+                    <div class="swiper-button-prev flex items-center justify-center border rounded-full relative w-12 h-12 -rotate-135">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="size-4">
+                            <path fill-rule="evenodd"
+                                d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                    <div class="swiper-button-next flex items-center justify-center border rounded-full relative w-12 h-12 rotate-45">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                                class="size-4">
+                                <path fill-rule="evenodd"
+                                    d="M8.25 3.75H19.5a.75.75 0 0 1 .75.75v11.25a.75.75 0 0 1-1.5 0V6.31L5.03 20.03a.75.75 0 0 1-1.06-1.06L17.69 5.25H8.25a.75.75 0 0 1 0-1.5Z"
+                                    clip-rule="evenodd" />
                             </svg>
-                        </button>
-                        <button id="eventsNext" aria-label="Berikutnya"
-                            class="events-nav-btn w-10 h-10 rounded-full border border-primary/30 flex items-center justify-center transition-all duration-200 hover:bg-primary hover:text-white hover:border-primary disabled:opacity-30 disabled:cursor-not-allowed">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-                                <path d="M9 18l6-6-6-6"/>
-                            </svg>
-                        </button>
                     </div>
                 </div>
-                <div class="relative overflow-hidden">
-                    <div id="eventsTrack" class="flex flex-nowrap gap-4 transition-transform duration-400 ease-in-out overflow-hidden">
-                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
-                            <a href="detail.html">
-                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                <div class="swiper event-swiper w-full overflow-hidden">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide event-card">
+                            <a href="#" class="relative">
+                                <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
                                     <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
-                                        class="w-full h-full object-cover" />
+                                            class="w-full h-full object-cover" />
                                 </div>
                                 <div class="cardDetail mt-2 p-2">
-                                    <h3 class="font-semibold text-lg">Kirab Budaya</h3>
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
                                     <div class="flex gap-2 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
@@ -569,14 +574,13 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
-                            <a href="detail.html">
-                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                        <div class="swiper-slide event-card">
+                            <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
                                     <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
-                                        class="w-full h-full object-cover" />
+                                            class="w-full h-full object-cover" />
                                 </div>
                                 <div class="cardDetail mt-2 p-2">
-                                    <h3 class="font-semibold text-lg">Kirab Budaya</h3>
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
                                     <div class="flex gap-2 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
@@ -591,17 +595,60 @@
                                         Lapangan Pancasila
                                     </div>
                                 </div>
-
+                        </div>
+                        <div class="swiper-slide event-card">
+                            <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                            class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2 p-2">
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                                        </svg>
+                                        20 Juli 2026 (13.00 - Selesai)
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                        Lapangan Pancasila
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="swiper-slide event-card">
+                            <a href="#" class="relative">
+                                <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
+                                    <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                                            class="w-full h-full object-cover" />
+                                </div>
+                                <div class="cardDetail mt-2 p-2">
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
+                                        </svg>
+                                        20 Juli 2026 (13.00 - Selesai)
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                                        </svg>
+                                        Lapangan Pancasila
+                                    </div>
+                                </div>
                             </a>
                         </div>
-                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
-                            <a href="detail.html">
-                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                        <div class="swiper-slide event-card">
+                            <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
                                     <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
-                                        class="w-full h-full object-cover" />
+                                            class="w-full h-full object-cover" />
                                 </div>
                                 <div class="cardDetail mt-2 p-2">
-                                    <h3 class="font-semibold text-lg">Kirab Budaya</h3>
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
                                     <div class="flex gap-2 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
@@ -616,17 +663,14 @@
                                         Lapangan Pancasila
                                     </div>
                                 </div>
-
-                            </a>
                         </div>
-                        <div class="w-32 md:w-48 lg:w-64 flex-shrink-0">
-                            <a href="detail.html">
-                                <div class="cardImg aspect-square rounded-xl overflow-hidden">
+                        <div class="swiper-slide event-card">
+                            <div class="w-64 aspect-square overflow-hidden bg-gray-800 rounded-lg">
                                     <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
-                                        class="w-full h-full object-cover" />
+                                            class="w-full h-full object-cover" />
                                 </div>
                                 <div class="cardDetail mt-2 p-2">
-                                    <h3 class="font-semibold text-lg">Kirab Budaya</h3>
+                                    <h3 class="font-semibold text-lg">Kirab Budaya 1</h3>
                                     <div class="flex gap-2 items-center">
                                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 shrink-0">
                                             <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z" />
@@ -641,8 +685,6 @@
                                         Lapangan Pancasila
                                     </div>
                                 </div>
-
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -675,27 +717,30 @@
 
         </section>
 
-        
-        <section class="-mx-3 lg:-mx-4 partner-section overflow-hidden">
-            <!-- <div class="logo-slider w-full overflow-hidden"> -->
-            <div class="logo-track flex">
-                <img src="logo-dinas.png" alt="Dinas Pariwisata">
-                <img src="logo-kominfo.png" alt="Kominfo">
-                <img src="logo-bappeda.png" alt="Bappeda">
-                <img src="logo-disbud.png" alt="Dinas Kebudayaan">
-                <img src="logo-bps.png" alt="BPS Salatiga">
-                
-                <img src="logo-dinas.png" alt="Dinas Pariwisata">
-                <img src="logo-kominfo.png" alt="Kominfo">
-                <img src="logo-bappeda.png" alt="Bappeda">
-                <img src="logo-disbud.png" alt="Dinas Kebudayaan">
-                <img src="logo-bps.png" alt="BPS Salatiga">
-                <!-- </div> -->
-            </div>
+        <section class="flex gap-4 lg:gap-8 flex-wrap justify-center pt-20">
+
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+            <a href="#" class="">
+                <img src="images/logo-dispar.png" alt="Dinas Pariwisata" class="h-16 object-contain">
+            </a>
+
         </section>
     </main>
-    <footer
-        class="footer bg-primary text-white pt-4 px-4 min-h-[30vh]">
+    <footer class="footer bg-primary text-white pt-4 px-4 min-h-[30vh]">
         <div class="grid lg:grid-cols-10 gap-8 mb-8 text-white">
             <div class="lg:col-span-5">
                 <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
@@ -704,65 +749,43 @@
                 </p>
 
                 <div class="flex gap-4 mt-8">
-
-                    <a href="#"
-                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
-
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
                         <i class="ri-instagram-line"></i>
-
                     </a>
-
-                    <a href="#"
-                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
-
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
                         <i class="ri-facebook-line"></i>
-
                     </a>
-
-                    <a href="#"
-                       class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
-
+                    <a href="#" class="w-12 h-12 rounded-full bg-white/10 hover:bg-[#97b39f] transition flex items-center justify-center">
                         <i class="ri-youtube-line"></i>
-
                     </a>
-
                 </div>
-
             </div>
             <div class="lg:col-span-2">
-
                 <h3 class="font-semibold text-xl mb-3">
                     Jelajahi
                 </h3>
-
                 <ul class="space-y-2 text-white/70">
-
                     <li>
                         <a href="#sejarah" class="hover:text-white transition">
                             Sejarah
                         </a>
                     </li>
-
                     <li>
                         <a href="#budaya" class="hover:text-white transition">
                             Budaya
                         </a>
                     </li>
-
                     <li>
                         <a href="#wisata" class="hover:text-white transition">
                             Wisata
                         </a>
                     </li>
-
                     <li>
                         <a href="#kuliner" class="hover:text-white transition">
                             Kuliner
                         </a>
                     </li>
-
                 </ul>
-
             </div>
             <div class="lg:col-span-3">
 
@@ -794,14 +817,14 @@
 
             </div>
         </div>
-        <div class="mb-16">
+        <div class="mb-2">
             <img src="asset/images/logo-footer.svg" class="w-full" />
         </div>
         <div class="border-t border-white py-4">
 
             <div class="flex flex-col md:flex-row gap-1 lg:gap-4">
 
-                <p class="text-white/80 text-sm">
+                <p class="text-white/80 text-sm mb-2">
                     © 2026 All Rights Reserved.
                 </p>
 
@@ -824,10 +847,12 @@
             </div>
 
         </div>
-        
+
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <script src="asset/js/gsap.min.js"></script>
     <script src="asset/js/GSDevTools.min.js"></script>
