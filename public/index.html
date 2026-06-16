@@ -39,12 +39,12 @@
             class="navbarContainer backdrop-blur-lg bg-primary-accent/20 relative rounded-md lg:flex lg:items-center lg:justify-between p-2">
             <a href="#" class="logo font-display font-bold uppercase">Salatiga</a>
             <ul class="hidden lg:w-fit lg:relative lg:flex lg:items-center lg:top-auto lg:left-auto lg:gap-2 xl:gap-6">
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Home</a></li>
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Sejarah</a></li>
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Wisata</a></li>
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Event</a></li>
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Akomodasi</a></li>
-                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="#">Rencana Perjalanan</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="index.html">Home</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="sejarah.html">Sejarah</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="wisata.html">Wisata</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="event.html">Event</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="wisata.html">Akomodasi</a></li>
+                <li class="px-4 py-2 w-100 lg:w-fit lg:py-0 lg:px-0"><a href="itenary.html">Rencana Perjalanan</a></li>
             </ul>
             <div class="absolute top-0 right-0 flex items-center sm:hidden">
                 <button type="button" command="--toggle" commandfor="mobile-menu"
@@ -64,12 +64,12 @@
             </div>
             <el-disclosure id="mobile-menu" hidden class="block sm:hidden">
                 <ul class="">
-                    <li class="py-4"><a href="#" class="block w-100">Home</a></li>
-                    <li class="py-4"><a href="#" class="block w-100">Sejarah</a></li>
-                    <li class="py-4"><a href="#" class="block w-100">Wisata</a></li>
-                    <li class="py-4"><a href="#" class="block w-100">Event</a></li>
-                    <li class="py-4"><a href="#" class="block w-100">Akomodasi</a></li>
-                    <li class="py-4"><a href="#" class="block w-100">Rencana Perjalanan</a></li>
+                    <li class="py-4"><a href="index.html" class="block w-100">Home</a></li>
+                    <li class="py-4"><a href="sejarah.html" class="block w-100">Sejarah</a></li>
+                    <li class="py-4"><a href="wisata.html" class="block w-100">Wisata</a></li>
+                    <li class="py-4"><a href="event.html" class="block w-100">Event</a></li>
+                    <li class="py-4"><a href="wisata.html" class="block w-100">Akomodasi</a></li>
+                    <li class="py-4"><a href="itenary.html" class="block w-100">Rencana Perjalanan</a></li>
                 </ul>
             </el-disclosure>
         </div>
@@ -97,23 +97,23 @@
                     yang sulit dilupakan.</h2>
             </div>
             <div class="introGallery flex gap-2 lg:gap-4 items-center mx-auto mt-6 mb-12 max-w-3xl">
-                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                <div class="introGallery-img w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                                 class="w-full h-full object-cover" />
                 </div>
-                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                <div class="introGallery-img w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                                 class="w-full h-full object-cover" />
                 </div>
-                <div class="w-2/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                <div class="introGallery-img w-2/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                                 class="w-full h-full object-cover" />
                 </div>
-                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                <div class="introGallery-img w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                                 class="w-full h-full object-cover" />
                 </div>
-                <div class="w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
+                <div class="introGallery-img w-1/6 aspect-[2/3] bg-gray-200 rounded-lg realtive overflow-hidden">
                     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
                                 class="w-full h-full object-cover" />
                 </div>
@@ -871,6 +871,7 @@
     <script src="asset/js/ScrollTrigger.min.js"></script>
     <script src="asset/js/SplitText.min.js"></script>
 
+    <script src="asset/js/index.js"></script>
     <script src="asset/js/main.js"></script>
 
 </body>
