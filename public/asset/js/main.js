@@ -3,6 +3,8 @@ let imgIntro = gsap.utils.toArray(".introImg");
 const tabBtns = document.querySelectorAll('.tab-btn');
 const tabPanels = document.querySelectorAll('.tab-panel');
 
+let imgGallery = gsap.utils.toArray(".introGallery-img");
+
 const colorHight = "#173021";
 
 document.addEventListener("DOMContentLoaded", (event) => {
@@ -38,43 +40,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // markers: true
     });
 
-    let timelineCard = gsap.utils.toArray(".timelineItem");
-
-    timelineCard.forEach(item => {
-
-        gsap.from(item, {
-            y: 80,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out",
-
+    imgGallery.forEach((el) => {
+        gsap.to(imgGallery, {
+            scale: 1,
+            opacity: 1,
+            transformOrigin: "50% 50%",
+            stagger: {
+                from: "center",
+                ease: 'power2.inOut',
+                amount: 1,
+            },
             scrollTrigger: {
-                trigger: item,
-                start: "top 80%",
-                // markers: true,
+                scrub: true,
+                trigger: ".introText",
+                start: "top 20%",
+                end: "top 0",
             }
-        });
-
-    });
-
-    const showAnim = gsap.from('.navbar', {
-        yPercent: -100,
-        paused: true,
-        duration: 0.3,
-        ease: "power2.out"
-    }).progress(1);
-
-    ScrollTrigger.create({
-        start: "top top",
-        end: "max",
-        onUpdate: (self) => {
-            if (self.direction === 1) {
-                showAnim.reverse();
-            } else {
-                showAnim.play();
-            }
-        }
-    });
+        })
+    })
 
 });
 
